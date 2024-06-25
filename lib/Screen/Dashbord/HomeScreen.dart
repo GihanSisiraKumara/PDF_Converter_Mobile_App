@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf.dart';
+import 'package:flutter_pdf_converter/Screen/SettingScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -38,16 +39,26 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(width: 0),
-            CircleAvatar(
-              radius: 20,
-              backgroundColor: const Color.fromARGB(255, 104, 246, 170),
-              child: ClipOval(
-                child: SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: Image.asset(
-                    'assets/images/repair.png',
-                    fit: BoxFit.cover,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Settingscreen(),
+                  ),
+                );
+              },
+              child: CircleAvatar(
+                radius: 20,
+                backgroundColor: const Color.fromARGB(255, 247, 250, 251),
+                child: ClipOval(
+                  child: SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: Image.asset(
+                      'assets/images/setting2.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -144,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       context,
                     ),
                     itemDashboard(
-                      'media',
+                      'merg',
                       CupertinoIcons.arrow_merge,
                       const Color.fromARGB(255, 241, 94, 126),
                       () {
