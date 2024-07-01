@@ -16,61 +16,61 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Row(
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              child: SizedBox(
-                width: 280, // Set the desired width
-                height: 50,
-                child: TextField(
-                  // onChanged: (value) => _runFilter(value),
-                  decoration: InputDecoration(
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
-                    suffixIcon: Icon(Icons.search),
-                    hintText: "Search",
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                      borderSide: BorderSide(),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(width: 0),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SettingsScreen(),
-                  ),
-                );
-              },
-              child: CircleAvatar(
-                radius: 20,
-                backgroundColor: const Color.fromARGB(255, 247, 250, 251),
-                child: ClipOval(
-                  child: SizedBox(
-                    width: 40,
-                    height: 40,
-                    child: Image.asset(
-                      'assets/images/setting2.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Row(
+              children: [
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 5),
+                  child: SizedBox(
+                    width: 300, // Set the desired width
+                    height: 50,
+                    child: TextField(
+                      // onChanged: (value) => _runFilter(value),
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(
+                            vertical: 10.0, horizontal: 20),
+                        suffixIcon: Icon(Icons.search),
+                        hintText: "Search",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          borderSide: BorderSide(),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 15),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SettingsScreen(),
+                      ),
+                    );
+                  },
+                  child: CircleAvatar(
+                    radius: 20,
+                    backgroundColor: const Color.fromARGB(255, 247, 250, 251),
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 40,
+                        height: 40,
+                        child: Image.asset(
+                          'assets/images/setting2.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(height: 10),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 5),
