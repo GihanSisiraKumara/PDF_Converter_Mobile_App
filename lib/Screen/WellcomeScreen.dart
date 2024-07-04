@@ -48,7 +48,12 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                   onTap: () {
                     _controller.jumpToPage(2);
                   },
-                  child: const Text('skip'),
+                  child: const Text(
+                    'skip',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 32, 37, 86)),
+                  ),
                 ),
                 SmoothPageIndicator(controller: _controller, count: 3),
 
@@ -64,7 +69,12 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                             }),
                           );
                         },
-                        child: const Text('Done'),
+                        child: const Text(
+                          'Done',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 32, 37, 86)),
+                        ),
                       )
                     : GestureDetector(
                         onTap: () {
@@ -72,7 +82,12 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                               duration: const Duration(milliseconds: 500),
                               curve: Curves.easeIn);
                         },
-                        child: const Text('Next'),
+                        child: const Text(
+                          'Next',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 32, 37, 86)),
+                        ),
                       ),
               ],
             )),
