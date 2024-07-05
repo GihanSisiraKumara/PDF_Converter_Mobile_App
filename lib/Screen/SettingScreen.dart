@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pdf_converter/Screen/About.dart';
 import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf.dart';
+import 'package:flutter_pdf_converter/Screen/FeedbackBord.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -116,7 +117,7 @@ class SettingsScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const TestHomePage(
+                    builder: (context) => const FeedbackBord(
                           title: '',
                         )),
               );
