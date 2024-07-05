@@ -41,6 +41,7 @@ dependencies:
   pdf: ^3.10.8
   permission_handler: ^11.3.1
   lottie: ^3.1.2
+  scroll_snap_list: ^0.9.1
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,8 @@ flutter:
     - assets/images/setting2.png
     - assets/animations/pdfall.json
     - assets/animations/done.json
+    - assets/images/sisira.jpg
+    - assets/images/sonal.png
     
     
     
