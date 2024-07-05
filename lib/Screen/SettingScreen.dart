@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pdf_converter/Screen/About.dart';
 import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -8,7 +9,29 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        backgroundColor: const Color.fromARGB(255, 252, 250, 251),
+        centerTitle: true,
+        title: const Text(
+          'Setting',
+          style: TextStyle(
+              fontSize: 22,
+              color: Color.fromARGB(255, 17, 18, 17),
+              fontWeight: FontWeight.bold),
+        ),
+        leading: IconButton(
+          style: ButtonStyle(
+            iconSize: WidgetStateProperty.all<double>(30),
+            iconColor: WidgetStateProperty.all<Color>(
+                const Color.fromARGB(255, 68, 211, 92)),
+            backgroundColor: WidgetStateProperty.all<Color>(
+              const Color.fromARGB(255, 180, 240, 200),
+            ),
+          ),
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,8 +131,9 @@ class SettingsScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const TestHomePage(
+                    builder: (context) => const About(
                           title: '',
+                          description: '',
                         )),
               );
             },
