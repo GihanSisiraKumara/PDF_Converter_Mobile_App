@@ -25,7 +25,7 @@ class _AboutState extends State<About> {
         backgroundColor: const Color.fromARGB(255, 252, 250, 251),
         centerTitle: true,
         title: const Text(
-          'Setting',
+          'About Us',
           style: TextStyle(
               fontSize: 22,
               color: Color.fromARGB(255, 17, 18, 17),
