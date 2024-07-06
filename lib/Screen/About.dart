@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pdf_converter/Screen/FeedbackBord.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 
 class About extends StatefulWidget {
@@ -102,17 +103,26 @@ class _AboutState extends State<About> {
                     ),
                     const SizedBox(height: 40),
                     TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            backgroundColor: Colors.blue,
-                            disabledForegroundColor:
-                                Colors.grey.withOpacity(0.38),
-                            shadowColor: Colors.red,
-                            elevation: 5,
-                            textStyle: const TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.bold)),
-                        child: const Text('Get in Touch'))
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FeedbackBord(
+                                    title: '',
+                                  )),
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                          foregroundColor: Colors.white,
+                          backgroundColor: Colors.blue,
+                          disabledForegroundColor:
+                              Colors.grey.withOpacity(0.38),
+                          shadowColor: Colors.red,
+                          elevation: 5,
+                          textStyle: const TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold)),
+                      child: const Text('Get in Touch'),
+                    ),
                   ],
                 ),
               )
