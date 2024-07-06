@@ -4,7 +4,7 @@ import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf.dart';
 import 'package:flutter_pdf_converter/Screen/SettingScreen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, required String title});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

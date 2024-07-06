@@ -39,31 +39,39 @@ class _HelpconditionState extends State<Helpcondition> {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: ListView(
-            children: const [
-              Mytimeline(
-                isFirst: true,
-                isLast: false,
-                isPast: true,
-                eventCard: Text('first Step'),
-              ),
-              Mytimeline(
-                isFirst: false,
-                isLast: false,
-                isPast: true,
-                eventCard: Text('second Step'),
-              ),
-              Mytimeline(
-                isFirst: false,
-                isLast: false,
-                isPast: false,
-                eventCard: Text('third Step'),
-              ),
-              Mytimeline(
-                isFirst: false,
-                isLast: true,
-                isPast: false,
-                eventCard: Text('forth Step'),
+          child: Column(
+            children: [
+              Image.asset('assets/images/help.jpeg'),
+              const SizedBox(height: 10),
+              Expanded(
+                child: ListView(
+                  children: const [
+                    Mytimeline(
+                      isFirst: true,
+                      isLast: false,
+                      isPast: true,
+                      eventCard: Text('first Step'),
+                    ),
+                    Mytimeline(
+                      isFirst: false,
+                      isLast: false,
+                      isPast: true,
+                      eventCard: Text('second Step'),
+                    ),
+                    Mytimeline(
+                      isFirst: false,
+                      isLast: false,
+                      isPast: false,
+                      eventCard: Text('third Step'),
+                    ),
+                    Mytimeline(
+                      isFirst: false,
+                      isLast: true,
+                      isPast: false,
+                      eventCard: Text('forth Step'),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

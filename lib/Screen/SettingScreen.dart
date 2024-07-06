@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pdf_converter/Screen/About.dart';
+import 'package:flutter_pdf_converter/Screen/CameraScanScreen.dart';
 import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf.dart';
 import 'package:flutter_pdf_converter/Screen/FeedbackBord.dart';
 import 'package:flutter_pdf_converter/Screen/HelpCondition.dart';
+import 'package:flutter_pdf_converter/Screen/TeamsCondition.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -54,14 +56,22 @@ class SettingsScreen extends StatelessWidget {
             iconColor: Colors.green,
             iconBgColor: const Color.fromARGB(255, 180, 240, 200),
             text: 'Scan',
-            onTap: () {
-              Navigator.push(
+            onTap: () async {
+              final result = await Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const TestHomePage(
-                          title: '',
-                        )),
+                  builder: (context) => const Camerascanscreen(
+                    title: '',
+                  ),
+                ),
               );
+              if (result != null) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Scan Results: $result'),
+                  ),
+                );
+              }
             },
           ),
           _buildSettingItem(
@@ -73,7 +83,7 @@ class SettingsScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const TestHomePage(
+                    builder: (context) => const Teamscondition(
                           title: '',
                         )),
               );
