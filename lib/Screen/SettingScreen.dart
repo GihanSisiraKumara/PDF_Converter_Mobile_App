@@ -24,9 +24,9 @@ class SettingsScreen extends StatelessWidget {
           style: ButtonStyle(
             iconSize: WidgetStateProperty.all<double>(30),
             iconColor: WidgetStateProperty.all<Color>(
-                const Color.fromARGB(255, 68, 211, 92)),
+                const Color.fromARGB(255, 55, 128, 201)),
             backgroundColor: WidgetStateProperty.all<Color>(
-              const Color.fromARGB(255, 180, 240, 200),
+              const Color.fromARGB(255, 163, 226, 247),
             ),
           ),
           icon: const Icon(Icons.arrow_back),

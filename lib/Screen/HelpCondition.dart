@@ -38,7 +38,7 @@ class _HelpconditionState extends State<Helpcondition> {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           child: ListView(
             children: const [
               Mytimeline(
@@ -55,9 +55,15 @@ class _HelpconditionState extends State<Helpcondition> {
               ),
               Mytimeline(
                 isFirst: false,
-                isLast: true,
+                isLast: false,
                 isPast: false,
                 eventCard: Text('third Step'),
+              ),
+              Mytimeline(
+                isFirst: false,
+                isLast: true,
+                isPast: false,
+                eventCard: Text('forth Step'),
               ),
             ],
           ),
