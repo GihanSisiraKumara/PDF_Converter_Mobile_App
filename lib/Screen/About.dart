@@ -13,15 +13,16 @@ class About extends StatefulWidget {
 class _AboutState extends State<About> {
   List<Product> productList = [
     Product('assets/images/sisira.jpg', 'Sisira Kumara', 100,
-        'I am a highly motivated Computer Science undergraduate seekingan internship that aligns with my academic knowledge  andpassion for technology. I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. My goal is torefine my skills, absorb industry knowledge, and make ameaningful impact during this training.'),
+        'I am a highly motivated Computer Science undergraduate seekingan internship that aligns with my academic knowledge  andpassion for technology. I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
     Product('assets/images/sonal.png', 'SS Gamage', 100,
-        'I am a highly motivated Computer Science undergraduate seekingan internship that aligns with my academic knowledge  andpassion for technology. I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. My goal is torefine my skills, absorb industry knowledge, and make ameaningful impact during this training.'),
+        'I am a highly motivated Computer Science undergraduate seekingan internship that aligns with my academic knowledge  andpassion for technology. I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
     Product('assets/images/sisira.jpg', 'Sisira', 100, 'sd'),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 252, 250, 251),
         centerTitle: true,
@@ -71,11 +72,16 @@ class _AboutState extends State<About> {
           borderRadius: const BorderRadius.all(Radius.circular(10)),
           child: Column(
             children: [
-              Image.asset(
-                product.imagePath,
-                fit: BoxFit.cover,
-                width: 150,
-                height: 180,
+              ClipRRect(
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(10),
+                ),
+                child: Image.asset(
+                  product.imagePath,
+                  fit: BoxFit.cover,
+                  width: 230,
+                  height: 270,
+                ),
               ),
               const SizedBox(height: 10),
               Text(
@@ -92,16 +98,18 @@ class _AboutState extends State<About> {
                       'BSc (Hons) in Computer Science',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 40),
-                    Center(
+                    const SizedBox(height: 20),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(
                         product.description,
+                        textAlign: TextAlign.justify,
                         style: const TextStyle(
                           color: Colors.blue,
                         ),
                       ),
                     ),
-                    const SizedBox(height: 40),
+                    const SizedBox(height: 20),
                     TextButton(
                       onPressed: () {
                         Navigator.push(

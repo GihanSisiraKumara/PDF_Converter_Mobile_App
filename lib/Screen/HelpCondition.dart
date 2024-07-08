@@ -50,25 +50,64 @@ class _HelpconditionState extends State<Helpcondition> {
                       isFirst: true,
                       isLast: false,
                       isPast: true,
-                      eventCard: Text('first Step'),
+                      eventCard: Text(
+                        'The Image Scan option allows you to use your device’s camera to capture images and convert them to PDF.',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
+                      ),
                     ),
                     Mytimeline(
                       isFirst: false,
                       isLast: false,
                       isPast: true,
-                      eventCard: Text('second Step'),
+                      eventCard: Text(
+                        'The DOC Import feature allows you to import Word documents and convert them to PDF.',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
+                      ),
                     ),
                     Mytimeline(
                       isFirst: false,
                       isLast: false,
                       isPast: false,
-                      eventCard: Text('third Step'),
+                      eventCard: Text(
+                        'The PDF View feature allows you to open, view, and interact with PDF files',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                    Mytimeline(
+                      isFirst: false,
+                      isLast: false,
+                      isPast: false,
+                      eventCard: Text(
+                          'The Image Convert option allows you to convert images stored on your device into PDF files.',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 15,
+                          )),
                     ),
                     Mytimeline(
                       isFirst: false,
                       isLast: true,
                       isPast: false,
-                      eventCard: Text('forth Step'),
+                      eventCard: Text(
+                          'The PDF Merge option allows you to combine multiple PDF files into a single document.',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 15,
+                          )),
                     ),
                   ],
                 ),
