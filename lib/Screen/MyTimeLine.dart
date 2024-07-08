@@ -17,7 +17,7 @@ class Mytimeline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
+      height: 190,
       child: TimelineTile(
         isFirst: isFirst,
         isLast: isLast,
