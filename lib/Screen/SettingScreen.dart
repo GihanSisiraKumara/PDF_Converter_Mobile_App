@@ -11,147 +11,159 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 252, 250, 251),
-        centerTitle: true,
-        title: const Text(
-          'Setting',
-          style: TextStyle(
-              fontSize: 22,
-              color: Color.fromARGB(255, 17, 18, 17),
-              fontWeight: FontWeight.bold),
-        ),
-        leading: IconButton(
-          style: ButtonStyle(
-            iconSize: WidgetStateProperty.all<double>(30),
-            iconColor: WidgetStateProperty.all<Color>(
-                const Color.fromARGB(255, 55, 128, 201)),
-            backgroundColor: WidgetStateProperty.all<Color>(
-              const Color.fromARGB(255, 163, 226, 247),
-            ),
+    return Stack(
+      children: [
+        Positioned.fill(
+          child: Image.asset(
+            'assets/images/blue2.jpg',
+            fit: BoxFit.cover,
           ),
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
         ),
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-            child: Text(
-              'General Setting',
+        Scaffold(
+          backgroundColor: Colors.transparent, // Make the scaffold transparent
+          appBar: AppBar(
+            backgroundColor: const Color.fromARGB(255, 217, 234, 251),
+            centerTitle: true,
+            title: const Text(
+              'Setting',
               style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
+                  fontSize: 22,
+                  color: Color.fromARGB(255, 17, 18, 17),
                   fontWeight: FontWeight.bold),
             ),
-          ),
-          const SizedBox(height: 10),
-          _buildSettingItem(
-            icon: Icons.qr_code_scanner_rounded,
-            iconColor: Colors.green,
-            iconBgColor: const Color.fromARGB(255, 180, 240, 200),
-            text: 'Scan',
-            onTap: () async {
-              final result = await Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Camerascanscreen(
-                    title: '',
-                  ),
+            leading: IconButton(
+              style: ButtonStyle(
+                iconSize: WidgetStateProperty.all<double>(30),
+                iconColor: WidgetStateProperty.all<Color>(
+                    const Color.fromARGB(255, 55, 128, 201)),
+                backgroundColor: WidgetStateProperty.all<Color>(
+                  const Color.fromARGB(255, 163, 226, 247),
                 ),
-              );
-              if (result != null) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('Scan Results: $result'),
-                  ),
-                );
-              }
-            },
+              ),
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ),
-          _buildSettingItem(
-            icon: Icons.pause_presentation_rounded,
-            iconColor: Colors.green,
-            iconBgColor: const Color.fromARGB(255, 180, 240, 200),
-            text: 'Teams & Condition',
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const Teamscondition(
-                          title: '',
-                        )),
-              );
-            },
+
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                child: Text(
+                  'General Setting',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(height: 10),
+              _buildSettingItem(
+                icon: Icons.qr_code_scanner_rounded,
+                iconColor: const Color.fromARGB(255, 55, 128, 201),
+                iconBgColor: const Color.fromARGB(255, 163, 226, 247),
+                text: 'Scan',
+                onTap: () async {
+                  final result = await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Camerascanscreen(
+                        title: '',
+                      ),
+                    ),
+                  );
+                  if (result != null) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Scan Results: $result'),
+                      ),
+                    );
+                  }
+                },
+              ),
+              _buildSettingItem(
+                icon: Icons.pause_presentation_rounded,
+                iconColor: const Color.fromARGB(255, 55, 128, 201),
+                iconBgColor: const Color.fromARGB(255, 163, 226, 247),
+                text: 'Teams & Condition',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Teamscondition(
+                              title: '',
+                            )),
+                  );
+                },
+              ),
+              _buildSettingItem(
+                icon: Icons.share_rounded,
+                iconColor: const Color.fromARGB(255, 55, 128, 201),
+                iconBgColor: const Color.fromARGB(255, 163, 226, 247),
+                text: 'Share',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TestHomePage(
+                              title: '',
+                            )),
+                  );
+                },
+              ),
+              _buildSettingItem(
+                icon: Icons.help,
+                iconColor: const Color.fromARGB(255, 55, 128, 201),
+                iconBgColor: const Color.fromARGB(255, 163, 226, 247),
+                text: 'Help & Support',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Helpcondition(
+                              title: '',
+                            )),
+                  );
+                },
+              ),
+              _buildSettingItem(
+                icon: Icons.message_rounded,
+                iconColor: const Color.fromARGB(255, 55, 128, 201),
+                iconBgColor: const Color.fromARGB(255, 163, 226, 247),
+                text: 'Feedback',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FeedbackBord(
+                              title: '',
+                            )),
+                  );
+                },
+              ),
+              _buildSettingItem(
+                icon: Icons.person_2_rounded,
+                iconColor: const Color.fromARGB(255, 55, 128, 201),
+                iconBgColor: const Color.fromARGB(255, 163, 226, 247),
+                text: 'About Us',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const About(
+                              title: '',
+                              description: '',
+                            )),
+                  );
+                },
+              ),
+            ],
           ),
-          _buildSettingItem(
-            icon: Icons.share_rounded,
-            iconColor: Colors.green,
-            iconBgColor: const Color.fromARGB(255, 180, 240, 200),
-            text: 'Share',
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const TestHomePage(
-                          title: '',
-                        )),
-              );
-            },
-          ),
-          _buildSettingItem(
-            icon: Icons.help,
-            iconColor: Colors.green,
-            iconBgColor: const Color.fromARGB(255, 180, 240, 200),
-            text: 'Help & Support',
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const Helpcondition(
-                          title: '',
-                        )),
-              );
-            },
-          ),
-          _buildSettingItem(
-            icon: Icons.message_rounded,
-            iconColor: Colors.green,
-            iconBgColor: const Color.fromARGB(255, 180, 240, 200),
-            text: 'Feedback',
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const FeedbackBord(
-                          title: '',
-                        )),
-              );
-            },
-          ),
-          _buildSettingItem(
-            icon: Icons.person_2_rounded,
-            iconColor: Colors.green,
-            iconBgColor: const Color.fromARGB(255, 180, 240, 200),
-            text: 'About Us',
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const About(
-                          title: '',
-                          description: '',
-                        )),
-              );
-            },
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -194,7 +206,7 @@ class SettingsScreen extends StatelessWidget {
             IconButton(
               icon: const Icon(
                 Icons.arrow_forward_ios,
-                color: Color.fromARGB(255, 71, 236, 79),
+                color: Color.fromARGB(255, 55, 71, 86),
               ),
               onPressed: onTap,
             ),
@@ -204,31 +216,3 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Similarly define other pages: SharePage, HelpSupportPage, FeedbackPage, AboutUsPage
