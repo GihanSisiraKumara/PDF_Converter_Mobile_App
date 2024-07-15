@@ -65,7 +65,9 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) {
-                              return const HomeScreen();
+                              return const HomeScreen(
+                                title: '',
+                              );
                             }),
                           );
                         },
