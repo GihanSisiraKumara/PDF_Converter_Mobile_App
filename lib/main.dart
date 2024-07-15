@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pdf_converter/Screen/Dashbord/HomeScreen.dart';
 import 'package:flutter_pdf_converter/Screen/WellcomeScreen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  bool isFirstLaunch = prefs.getBool('isFirstLaunch') ?? true;
+
+  runApp(MyApp(isFirstLaunch: isFirstLaunch));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool isFirstLaunch;
 
-  // This widget is the root of your application.
+  const MyApp({super.key, required this.isFirstLaunch});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,7 +24,7 @@ class MyApp extends StatelessWidget {
         fontFamily: ('inter'),
         useMaterial3: true,
       ),
-      home: const WellcomeScreen(),
+      home: isFirstLaunch ? const WellcomeScreen() : const HomeScreen(),
     );
   }
 }

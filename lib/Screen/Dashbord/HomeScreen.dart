@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf.dart';
+import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf2.dart';
 import 'package:flutter_pdf_converter/Screen/SettingScreen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -128,13 +129,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Color.fromARGB(255, 222, 98, 96),
                       () {
                         // Use the function to navigate to the desired page
-                        // Navigator.push(
-                        // context,
-                        // MaterialPageRoute(
-                        // builder: (context) =>
-                        // const bellBord(title: 'Analytics & Exam'),
-                        // ),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PdfScannerPage(),
+                          ),
+                        );
                       },
                       context,
                     ),
