@@ -24,7 +24,11 @@ class MyApp extends StatelessWidget {
         fontFamily: ('inter'),
         useMaterial3: true,
       ),
-      home: isFirstLaunch ? const WellcomeScreen() : const HomeScreen(),
+      home: isFirstLaunch
+          ? const WellcomeScreen()
+          : const HomeScreen(
+              title: '',
+            ),
     );
   }
 }
