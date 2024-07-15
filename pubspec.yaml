@@ -42,6 +42,9 @@ dependencies:
   lottie: ^3.1.2
   camera: ^0.11.0+1
   shared_preferences: ^2.2.3
+  scroll_snap_list: ^0.9.1
+  timeline_tile: ^2.0.0
+  mobile_scanner: ^5.1.1
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +72,14 @@ flutter:
     - assets/images/setting2.png
     - assets/animations/pdfall.json
     - assets/animations/done.json
+    - assets/images/sisira.jpg
+    - assets/images/sonal.png
+    - assets/images/contact.png
+    - assets/images/facebook1.png
+    - assets/images/linked.png
+    - assets/images/help.jpeg
+    - assets/images/blue3.jpg
+    - assets/images/blue2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
