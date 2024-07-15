@@ -137,6 +137,12 @@ class _FeedbackBordState extends State<FeedbackBord> {
                 Tab(
                   icon: Image.asset('assets/images/linked.png'),
                 ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Tab(
+                  icon: Image.asset('assets/images/Github.png'),
+                ),
               ],
             )
           ],
