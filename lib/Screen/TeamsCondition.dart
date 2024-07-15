@@ -57,7 +57,9 @@ class _TeamsconditionState extends State<Teamscondition> {
           const Padding(
             padding: EdgeInsets.all(14.0),
             child: Text(
-                'The development of a mobile app involves multiple teams working together to ensure its success. The product management team defines the apps vision, strategy, and roadmap, conducting market research and setting requirements to meet user needs. The design team focuses on creating an intuitive and user-friendly interface, developing wireframes, mockups, and prototypes to guide the apps look and feel. The development team then brings these designs to life, writing code and integrating APIs to ensure the app functions correctly across different devices and platforms. Finally, the quality assurance (QA) team rigorously tests the app to identify and fix any bugs, ensuring it meets high standards of performance and reliability before release.'),
+              'The development of a mobile app involves multiple teams working together to ensure its success. The product management team defines the apps vision, strategy, and roadmap, conducting market research and setting requirements to meet user needs. The design team focuses on creating an intuitive and user-friendly interface, developing wireframes, mockups, and prototypes to guide the apps look and feel. The development team then brings these designs to life, writing code and integrating APIs to ensure the app functions correctly across different devices and platforms. Finally, the quality assurance (QA) team rigorously tests the app to identify and fix any bugs, ensuring it meets high standards of performance and reliability before release.',
+              textAlign: TextAlign.justify,
+            ),
           ),
           Row(
             children: [
@@ -82,7 +84,9 @@ class _TeamsconditionState extends State<Teamscondition> {
           const Padding(
             padding: EdgeInsets.all(14.0),
             child: Text(
-                'The development of a mobile app involves multiple teams working together to ensure its success. The product management team defines the apps vision, strategy, and roadmap, conducting market research and setting requirements to meet user needs. The design team focuses on creating an intuitive and user-friendly interface, developing wireframes, mockups, and prototypes to guide the apps look and feel'),
+              'The development of a mobile app involves multiple teams working together to ensure its success. The product management team defines the apps vision, strategy, and roadmap, conducting market research and setting requirements to meet user needs. The design team focuses on creating an intuitive and user-friendly interface, developing wireframes, mockups, and prototypes to guide the apps look and feel',
+              textAlign: TextAlign.justify,
+            ),
           ),
           Row(
             children: [
