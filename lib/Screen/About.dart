@@ -13,9 +13,9 @@ class About extends StatefulWidget {
 class _AboutState extends State<About> {
   List<Product> productList = [
     Product('assets/images/sisira.jpg', 'Sisira Kumara', 100,
-        'I am a highly motivated Computer Science undergraduate seekingan internship that aligns with my academic knowledge  andpassion for technology. I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
+        ' I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
     Product('assets/images/sonal.png', 'SS Gamage', 100,
-        'I am a highly motivated Computer Science undergraduate seekingan internship that aligns with my academic knowledge  andpassion for technology. I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
+        ' I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
     Product('assets/images/sisira.jpg', 'Sisira', 100, 'sd'),
   ];
 
@@ -109,7 +109,7 @@ class _AboutState extends State<About> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     TextButton(
                       onPressed: () {
                         Navigator.push(
@@ -131,6 +131,23 @@ class _AboutState extends State<About> {
                               fontSize: 15, fontWeight: FontWeight.bold)),
                       child: const Text('Get in Touch'),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Tab(
+                            icon: Image.asset('assets/images/facebook1.png'),
+                          ),
+                          const SizedBox(
+                            width: 30,
+                          ),
+                          Tab(
+                            icon: Image.asset('assets/images/linked.png'),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               )
