@@ -22,13 +22,13 @@ class SettingsScreen extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent, // Make the scaffold transparent
           appBar: AppBar(
-            backgroundColor: const Color.fromARGB(255, 217, 234, 251),
+            backgroundColor: const Color.fromARGB(255, 222, 238, 250),
             centerTitle: true,
             title: const Text(
               'Setting',
               style: TextStyle(
                   fontSize: 22,
-                  color: Color.fromARGB(255, 17, 18, 17),
+                  color: Color.fromARGB(255, 57, 83, 109),
                   fontWeight: FontWeight.bold),
             ),
             leading: IconButton(
