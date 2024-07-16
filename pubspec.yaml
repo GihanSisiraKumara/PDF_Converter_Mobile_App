@@ -45,6 +45,7 @@ dependencies:
   timeline_tile: ^2.0.0
   mobile_scanner: ^5.1.1
   shared_preferences: ^2.2.3
+  qr_code_scanner: ^1.0.1
 
 dev_dependencies:
   flutter_test:
