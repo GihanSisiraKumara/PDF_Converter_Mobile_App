@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdf_converter/Screen/Dashbord/testcampdf.dart';
 import 'package:flutter_pdf_converter/Screen/SettingScreen.dart';
+import 'package:flutter_pdf_converter/Screen/can_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required String title});
@@ -96,13 +97,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Color.fromARGB(255, 147, 236, 192),
                       () {
                         // Use the function to navigate to the desired page
-                        // Navigator.push(
-                        // context,
-                        // MaterialPageRoute(
-                        // builder: (context) =>
-                        // const ConnectScreen(title: 'Analytics & Exam'),
-                        // ),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const QRScanPage(),
+                          ),
+                        );
                       },
                       context,
                     ),
