@@ -10,6 +10,7 @@ class WellcomeScreen extends StatefulWidget {
   const WellcomeScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _WellcomeScreenState createState() => _WellcomeScreenState();
 }
 
