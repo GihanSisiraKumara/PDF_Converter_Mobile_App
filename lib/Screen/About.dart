@@ -13,10 +13,10 @@ class About extends StatefulWidget {
 class _AboutState extends State<About> {
   List<Product> productList = [
     Product('assets/images/sisira.jpg', 'Sisira Kumara', 100,
-        ' I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
+        " I'm highly motivated 24-year-old Computer Science undergraduate with a passion for full-stack development. Currently, we are developing a PDF converter app, showcasing skills in Flutter and Dart. Eager to refine our skills and make a meaningful impact, I'm aims to leverage our technical knowledge in professional settings.We hope that this app give you special features."),
     Product('assets/images/sonal.png', 'SS Gamage', 100,
-        ' I am eager to apply my knowledge in aprofessional setting with backend development ,frontenddevelopment , project management, Quality assurance, Databasemanagement, software engineering and programming languagessuch as Java, PHP, Dart, HTML,CSS, and JavaScript. '),
-    Product('assets/images/sisira.jpg', 'Sisira', 100, 'sd'),
+        " I'm highly motivated 25-year-old Computer Science undergraduate with a passion for full-stack development. Currently, we are developing a PDF converter app, showcasing skills in Flutter and Dart. Eager to refine our skills and make a meaningful impact, I'm aims to leverage our technical knowledge in professional settings.We hope that this app give you special features."),
+    // Product('assets/images/sisira.jpg', 'Sisira', 100, 'sd'),
   ];
 
   @override
