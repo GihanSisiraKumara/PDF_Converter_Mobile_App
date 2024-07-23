@@ -15,14 +15,15 @@ class SettingsScreen extends StatelessWidget {
       children: [
         Positioned.fill(
           child: Image.asset(
-            'assets/images/blue2.jpg',
+            'assets/images/feedback.jpg',
             fit: BoxFit.cover,
           ),
         ),
         Scaffold(
           backgroundColor: Colors.transparent, // Make the scaffold transparent
           appBar: AppBar(
-            backgroundColor: const Color.fromARGB(255, 222, 238, 250),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             centerTitle: true,
             title: const Text(
               'Setting',

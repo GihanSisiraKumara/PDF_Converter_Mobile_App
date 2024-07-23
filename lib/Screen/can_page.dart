@@ -25,8 +25,29 @@ class _QRScanPageState extends State<QRScanPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('QR Scan'),
-        backgroundColor: const Color.fromARGB(255, 32, 37, 86),
+        backgroundColor: const Color.fromARGB(255, 222, 238, 250),
+        centerTitle: true,
+        title: const Text(
+          'Qr Scanner',
+          style: TextStyle(
+              fontSize: 22,
+              color: Color.fromARGB(255, 57, 83, 109),
+              fontWeight: FontWeight.bold),
+        ),
+        leading: IconButton(
+          style: ButtonStyle(
+            iconSize: WidgetStateProperty.all<double>(30),
+            iconColor: WidgetStateProperty.all<Color>(
+                const Color.fromARGB(255, 55, 128, 201)),
+            backgroundColor: WidgetStateProperty.all<Color>(
+              const Color.fromARGB(255, 163, 226, 247),
+            ),
+          ),
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Column(
         children: <Widget>[

@@ -146,10 +146,10 @@ class _AboutState extends State<About> {
                             icon: Image.asset('assets/images/linked.png'),
                           ),
                           const SizedBox(
-                            width: 10,
+                            width: 20,
                           ),
                           Tab(
-                            icon: Image.asset('assets/images/Github.png'),
+                            icon: Image.asset('assets/images/Github1.png'),
                           ),
                         ],
                       ),

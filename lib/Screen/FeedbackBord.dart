@@ -43,7 +43,7 @@ class _FeedbackBordState extends State<FeedbackBord> {
               height: 10,
             ),
             Container(
-              child: Image.asset('assets/images/contact.png'),
+              child: Image.asset('assets/images/contact1.png'),
             ),
             const SizedBox(height: 10),
             Padding(
@@ -138,10 +138,10 @@ class _FeedbackBordState extends State<FeedbackBord> {
                   icon: Image.asset('assets/images/linked.png'),
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 20,
                 ),
                 Tab(
-                  icon: Image.asset('assets/images/Github.png'),
+                  icon: Image.asset('assets/images/Github1.png'),
                 ),
               ],
             )

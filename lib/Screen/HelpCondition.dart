@@ -41,7 +41,7 @@ class _HelpconditionState extends State<Helpcondition> {
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Column(
             children: [
-              Image.asset('assets/images/help.jpeg'),
+              Image.asset('assets/images/help1.png'),
               const SizedBox(height: 10),
               Expanded(
                 child: ListView(
